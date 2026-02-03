@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificación de cuenta</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f2f2f2;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.alert {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #1a73e8;
+  color: white;
+  font-weight: bold;
+}
+
+button:active {
+  background: #1558b0;
+}
+
+.warning {
+  display: none;
+  margin-top: 20px;
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="card">
+
+    <div class="logo">SecureMail</div>
+    <div class="subtitle">Protección de acceso</div>
+
+    <div class="alert">
+      Detectamos actividad inusual en tu cuenta.  
+      Por seguridad, verifica tu información.
+    </div>
+
+    <input type="email" placeholder="Correo electrónico">
+    <input type="password" placeholder="Contraseña">
+
+    <button onclick="mostrarAdvertencia()">Verificar ahora</button>
+
+    <div class="warning" id="aviso">
+      ⚠️ <strong>DEMO EDUCATIVA</strong><br><br>
+      Si esta página fuera maliciosa,  
+      tus credenciales ya habrían sido robadas.<br><br>
+      <strong>Lección:</strong><br>
+      Nunca ingreses contraseñas desde enlaces.
+    </div>
+
+    <div class="footer">
+      Ejercicio de concientización – Seguridad Digital
+    </div>
+
+  </div>
+</div>
+
+<script>
+function mostrarAdvertencia() {
+  document.getElementById("aviso").style.display = "block";
+}
+</script>
+
+</body>
+</html>
